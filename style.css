@@ -58,6 +58,14 @@ main#app {
   text-align: center;
 }
 
+#user-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+}
+
+
 h1, h2 {
   font-size: 1.75rem;
   margin: 0;
