@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#121212" />
+  <title>Дневник Telegram</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- <header>
+    <div id="greeting">Здравствуйте</div>
+    <img id="user-photo" src="" alt="avatar" />
+  </header>
+  <main id="main-screen">
+    <ul id="entries-list"></ul>
+    <button id="new-entry-btn">📔 Расскажите, что было сегодня</button>
+  </main> -->
+
+  <!-- <section id="entry-screen" hidden>
+    <h2 id="entry-title">Запись мыслей</h2>
+    <textarea id="entry-text" placeholder="Ваши мысли..."></textarea>
+    <div class="controls">
+      <button id="save-entry-btn">💾 Сохранить</button>
+      <button id="back-btn">🔙 Назад</button>
+    </div>
+  </section> -->
+
+
+  <div id="welcome-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>👋 Добро пожаловать, <span id="name"></span>!</h2>
+    <p>Это ваш личный дневник, в котором вы можете каждый день:</p>
+    <ul>
+      <li>📝 Записывать мысли и важные события</li>
+      <li>🕒 Видеть дату каждой записи</li>
+      <li>✏️ Редактировать и удалять заметки <span>(для этого нажмите и удерживайте запись)</span></li>
+      <li>🔔 Получать напоминание каждый вечер</li>
+      <li>📱 Работать даже в офлайне как PWA</li>
+    </ul>
+    <button id="start-btn">Начать пользоваться</button>
+  </div>
+</div>
+<div id="modal-blur-overlay" class="modal-blur hidden"></div>
+
+
+  <main id="app">
+    <!-- Главная страница -->
+    <section id="main-screen">
+      <header class="header">
+        <h1 id="greeting">Здравствуйте,</h1>
+        <img id="user-photo" src="" alt="avatar">
+      </header>
+      <button id="new-entry-btn" class="primary-button">+ Новая запись</button>
+      <ul id="entries-list" class="entry-list"></ul>
+
+      <div id="context-menu" class="context-menu hidden">
+        <button id="edit-btn">✏️ Редактировать</button>
+        <button id="delete-btn">🗑️ Удалить</button>
+      </div>
+    </section>
+
+    <!-- Страница записи мыслей -->
+    <section id="entry-screen" hidden>
+      <header class="header">
+        <button id="back-btn" class="back-button"><i class="fa-solid fa-arrow-left"></i> Назад</button>
+        <h2 id="entry-title">Запись мыслей</h2>
+      </header>
+      <div class="entry-area">
+        <textarea id="entry-text" placeholder="Напишите здесь всё, что у вас на душе..."></textarea>
+      </div>
+      <div class="actions">
+        <button id="save-entry-btn" class="primary-button">💾 Сохранить</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-message">✨ Ведите дневник каждый день — он поможет вам понять себя.</p>
+  </footer>
+
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
